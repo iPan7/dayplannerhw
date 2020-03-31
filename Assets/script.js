@@ -27,19 +27,34 @@ $('.date').text(output);
 // localStorage.setItem("tasks")
 
 // const saveBtn = document.getElementsByClassName("saveBtn");
-saveBtn1.addEventListener('click', saveBtnF);
-saveBtn2.addEventListener('click', saveBtnF);
-saveBtn3.addEventListener('click', saveBtnF);
-saveBtn4.addEventListener('click', saveBtnF);
-saveBtn5.addEventListener('click', saveBtnF);
-saveBtn6.addEventListener('click', saveBtnF);
-saveBtn7.addEventListener('click', saveBtnF);
-saveBtn8.addEventListener('click', saveBtnF);
-saveBtn9.addEventListener('click', saveBtnF);
+addEvent1.addEventListener('click', addEvent, task1);
+addEvent2.addEventListener('click', addEvent);
+addEvent3.addEventListener('click', addEvent);
+addEvent4.addEventListener('click', addEvent);
+addEvent5.addEventListener('click', addEvent);
+addEvent6.addEventListener('click', addEvent);
+addEvent7.addEventListener('click', addEvent);
+addEvent8.addEventListener('click', addEvent);
+addEvent9.addEventListener('click', addEvent);
 
-function saveBtnF(){
+const field1 = document.querySelector("field1");
+
+function task1(){
+    console.log(task1);
+    let field1_seriaized = JSON.stringify(field1)
+    console.log(field1_seriaized);
+
+    localStorage.setItem("field1", field1_serialized)
+    console.log(localstorage);
+}
+let field1_deserialized = JSON.parse(localStorage.getItem("field1"));
+
+console.log(field1_deserialized);
+
+function addEvent(){
     alert("task saved!");
 }
+
 
 //   // function to update row color
 //   function updateRowColor ($hourRow,hour) { 
