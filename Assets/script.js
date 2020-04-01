@@ -27,6 +27,11 @@ function setup (){
     eventField["1000"] = document.getElementById("1000");
     eventField["1100"] = document.getElementById("1100");
     eventField["1200"] = document.getElementById("1200");
+    eventField["1300"] = document.getElementById("1300");
+    eventField["1400"] = document.getElementById("1400");
+    eventField["1500"] = document.getElementById("1500");
+    eventField["1600"] = document.getElementById("1600");
+    eventField["1700"] = document.getElementById("1700");
 }
 
 function addEvent (clickId){
@@ -51,6 +56,22 @@ function addEvent (clickId){
         alert(clickId);
         localStorage.setItem("1300",eventField["1300"].value);
     }
+    else if (clickId == "addEvent6"){
+        alert(clickId);
+        localStorage.setItem("1400",eventField["1400"].value);
+    }
+    else if (clickId == "addEvent7"){
+        alert(clickId);
+        localStorage.setItem("1500",eventField["1500"].value);
+    }
+    else if (clickId == "addEvent8"){
+        alert(clickId);
+        localStorage.setItem("1600",eventField["1600"].value);
+    }
+    else if (clickId == "addEvent9"){
+        alert(clickId);
+        localStorage.setItem("1700",eventField["1700"].value);
+    }
     console.log(localStorage);
 }
 
@@ -60,6 +81,27 @@ function showEvent (){
     }
     else if (localStorage.getItem("1000") != null){
         eventField["1000"].value = localStorage.getItem("1000");
+    }
+    else if (localStorage.getItem("1100") != null){
+        eventField["1100"].value = localStorage.getItem("1100");
+    }
+    else if (localStorage.getItem("1200") != null){
+        eventField["1200"].value = localStorage.getItem("1200");
+    }
+    else if (localStorage.getItem("1300") != null){
+        eventField["1300"].value = localStorage.getItem("1300");
+    }
+    else if (localStorage.getItem("1400") != null){
+        eventField["1400"].value = localStorage.getItem("1400");
+    }
+    else if (localStorage.getItem("1500") != null){
+        eventField["1500"].value = localStorage.getItem("1500");
+    }
+    else if (localStorage.getItem("1600") != null){
+        eventField["1600"].value = localStorage.getItem("1600");
+    }
+    else if (localStorage.getItem("1700") != null){
+        eventField["1700"].value = localStorage.getItem("1700");
     }
 }
 
