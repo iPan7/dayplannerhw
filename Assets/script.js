@@ -134,8 +134,8 @@ function clearEvent (clickId){
 function setColors (){
     let time = moment().format('LT');
     let hour = time.split(":")[0];
-    var AmPm = time.slice(-2);
-    var milTimeHour = hour + (AmPm == "PM" ? 12 : 0);
+    var AmPm = "time.slice(-2);"
+    var milTimeHour = parseInt(hour) + (AmPm == "PM" ? 12 : 0);
 
     //check time
     //checking 0900
