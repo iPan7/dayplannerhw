@@ -27,44 +27,33 @@ function setup (){
 //addevent button functionality
 
 function addEvent (clickId){
-    console.log(clickId);
     if (clickId == "addEvent1"){
-        alert(clickId);
         localStorage.setItem("0900",eventField["0900"].value);
     }
     else if (clickId == "addEvent2"){
-        alert(clickId);
         localStorage.setItem("1000",eventField["1000"].value);
     }
     else if (clickId == "addEvent3"){
-        alert(clickId);
         localStorage.setItem("1100",eventField["1100"].value);
     }
     else if (clickId == "addEvent4"){
-        alert(clickId);
         localStorage.setItem("1200",eventField["1200"].value);
     }
     else if (clickId == "addEvent5"){
-        alert(clickId);
         localStorage.setItem("1300",eventField["1300"].value);
     }
     else if (clickId == "addEvent6"){
-        alert(clickId);
         localStorage.setItem("1400",eventField["1400"].value);
     }
     else if (clickId == "addEvent7"){
-        alert(clickId);
         localStorage.setItem("1500",eventField["1500"].value);
     }
     else if (clickId == "addEvent8"){
-        alert(clickId);
         localStorage.setItem("1600",eventField["1600"].value);
     }
     else if (clickId == "addEvent9"){
-        alert(clickId);
         localStorage.setItem("1700",eventField["1700"].value);
     }
-    console.log(localStorage);
 }
 
 // showevent in text field
@@ -102,49 +91,39 @@ function showEvent (){
 // clearevent button functionality
 
 function clearEvent (clickId){
-    console.log(clickId);
     if (clickId == "clearEvent1"){
-        alert(clickId);
         localStorage.removeItem("0900");
         eventField["0900"].value = null;
     }
     else if (clickId == "clearEvent2"){
-        alert(clickId);
         localStorage.removeItem("1000");
         eventField["1000"].value = null;
     }
     else if (clickId == "clearEvent3"){
-        alert(clickId);
         localStorage.removeItem("1100");
         eventField["1100"].value = null;
     }
     else if (clickId == "clearEvent4"){
-        alert(clickId);
         localStorage.removeItem("1200");
         eventField["1200"].value = null;
     }
     else if (clickId == "clearEvent5"){
-        alert(clickId);
         localStorage.removeItem("1300");
         eventField["1300"].value = null;
     }
     else if (clickId == "clearEvent6"){
-        alert(clickId);
         localStorage.removeItem("1400");
         eventField["1400"].value = null;
     }
     else if (clickId == "clearEvent7"){
-        alert(clickId);
         localStorage.removeItem("1500");
         eventField["1500"].value = null;
     }
     else if (clickId == "clearEvent8"){
-        alert(clickId);
         localStorage.removeItem("1600");
         eventField["1600"].value = null;
     }
     else if (clickId == "clearEvent9"){
-        alert(clickId);
         localStorage.removeItem("1700");
         eventField["1700"].value = null;
     }
@@ -157,7 +136,6 @@ function setColors (){
     let hour = time.split(":")[0];
     var AmPm = time.slice(-2);
     var milTimeHour = hour + (AmPm == "PM" ? 12 : 0);
-    console.log(milTimeHour);
 
     //check time
     //checking 0900
