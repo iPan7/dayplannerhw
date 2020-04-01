@@ -73,3 +73,15 @@ textarea{
 .row {
   border-bottom: 25px;
 }
+
+.old {
+  background-color: grey;
+}
+
+.new {
+  background-color: green;
+}
+
+.current {
+  background-color: red;
+}
