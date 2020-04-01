@@ -1,6 +1,4 @@
-// $(document).ready(function() {
-// });
-var tasks;
+// create time and date at top
 
 let d = new Date()
 
@@ -14,7 +12,7 @@ let output =
 
 $('.date').text(output);
 
-// create time and date at top
+// setup
 
 var eventField = [];
 
@@ -33,6 +31,8 @@ function setup (){
     eventField["1600"] = document.getElementById("1600");
     eventField["1700"] = document.getElementById("1700");
 }
+
+//addevent button functionality
 
 function addEvent (clickId){
     console.log(clickId);
@@ -75,35 +75,39 @@ function addEvent (clickId){
     console.log(localStorage);
 }
 
+// showevent in text field
+
 function showEvent (){
     if (localStorage.getItem("0900") != null){
         eventField["0900"].value = localStorage.getItem("0900");
     }
-    else if (localStorage.getItem("1000") != null){
+    if (localStorage.getItem("1000") != null){
         eventField["1000"].value = localStorage.getItem("1000");
     }
-    else if (localStorage.getItem("1100") != null){
+    if (localStorage.getItem("1100") != null){
         eventField["1100"].value = localStorage.getItem("1100");
     }
-    else if (localStorage.getItem("1200") != null){
+    if (localStorage.getItem("1200") != null){
         eventField["1200"].value = localStorage.getItem("1200");
     }
-    else if (localStorage.getItem("1300") != null){
+    if (localStorage.getItem("1300") != null){
         eventField["1300"].value = localStorage.getItem("1300");
     }
-    else if (localStorage.getItem("1400") != null){
+    if (localStorage.getItem("1400") != null){
         eventField["1400"].value = localStorage.getItem("1400");
     }
-    else if (localStorage.getItem("1500") != null){
+    if (localStorage.getItem("1500") != null){
         eventField["1500"].value = localStorage.getItem("1500");
     }
-    else if (localStorage.getItem("1600") != null){
+    if (localStorage.getItem("1600") != null){
         eventField["1600"].value = localStorage.getItem("1600");
     }
-    else if (localStorage.getItem("1700") != null){
+    if (localStorage.getItem("1700") != null){
         eventField["1700"].value = localStorage.getItem("1700");
     }
 }
+
+// clearevent button functionality
 
 function clearEvent (clickId){
     console.log(clickId);
@@ -117,15 +121,51 @@ function clearEvent (clickId){
         localStorage.removeItem("1000");
         eventField["1000"].value = null;
     }
+    else if (clickId == "clearEvent3"){
+        alert(clickId);
+        localStorage.removeItem("1100");
+        eventField["1100"].value = null;
+    }
+    else if (clickId == "clearEvent4"){
+        alert(clickId);
+        localStorage.removeItem("1200");
+        eventField["1200"].value = null;
+    }
+    else if (clickId == "clearEvent5"){
+        alert(clickId);
+        localStorage.removeItem("1300");
+        eventField["1300"].value = null;
+    }
+    else if (clickId == "clearEvent6"){
+        alert(clickId);
+        localStorage.removeItem("1400");
+        eventField["1400"].value = null;
+    }
+    else if (clickId == "clearEvent7"){
+        alert(clickId);
+        localStorage.removeItem("1500");
+        eventField["1500"].value = null;
+    }
+    else if (clickId == "clearEvent8"){
+        alert(clickId);
+        localStorage.removeItem("1600");
+        eventField["1600"].value = null;
+    }
+    else if (clickId == "clearEvent9"){
+        alert(clickId);
+        localStorage.removeItem("1700");
+        eventField["1700"].value = null;
+    }
 }
+
+// set colors based dynamically on time
 
 function setColors (){
     let time = moment().format('LT');
     let hour = time.split(":")[0];
     var AmPm = time.slice(-2);
-    // var milTimeHour = hour + (AmPm == "PM" ? 12 : 0);
-    var milTimeHour = 10;
-console.log(milTimeHour);
+    var milTimeHour = hour + (AmPm == "PM" ? 12 : 0);
+    console.log(milTimeHour);
 
     //check time
     //checking 0900
@@ -149,7 +189,7 @@ console.log(milTimeHour);
         eventField["1000"].classList.add("new");
     }
     //checking 1100
-        if (milTimeHour > 11){
+    if (milTimeHour > 11){
         eventField["1100"].classList.add("old");
     }
     else if (milTimeHour == 11){
@@ -159,7 +199,7 @@ console.log(milTimeHour);
         eventField["1100"].classList.add("new");
     }
     //checking 1200
-        if (milTimeHour > 12){
+    if (milTimeHour > 12){
         eventField["1200"].classList.add("old");
     }
     else if (milTimeHour == 12){
@@ -167,5 +207,55 @@ console.log(milTimeHour);
     }
     else {
         eventField["1200"].classList.add("new");
+    }
+    //checking 1300
+    if (milTimeHour > 13){
+        eventField["1300"].classList.add("old");
+    }
+    else if (milTimeHour == 13){
+        eventField["1300"].classList.add("current");
+    }
+    else {
+        eventField["1300"].classList.add("new");
+    }
+    //checking 1400
+    if (milTimeHour > 14){
+        eventField["1400"].classList.add("old");
+    }
+    else if (milTimeHour == 14){
+        eventField["1400"].classList.add("current");
+    }
+    else {
+        eventField["1400"].classList.add("new");
+    }
+    //checking 1500
+    if (milTimeHour > 15){
+        eventField["1500"].classList.add("old");
+    }
+    else if (milTimeHour == 15){
+        eventField["1500"].classList.add("current");
+    }
+    else {
+        eventField["1500"].classList.add("new");
+    }
+    //checking 1600
+    if (milTimeHour > 16){
+        eventField["1600"].classList.add("old");
+    }
+    else if (milTimeHour == 16){
+        eventField["1600"].classList.add("current");
+    }
+    else {
+        eventField["1600"].classList.add("new");
+    }
+    //checking 1700
+    if (milTimeHour > 17){
+        eventField["1700"].classList.add("old");
+    }
+    else if (milTimeHour == 17){
+        eventField["1700"].classList.add("current");
+    }
+    else {
+        eventField["1700"].classList.add("new");
     }
 }
